@@ -1,0 +1,45 @@
+/* Name: Ji Eun Han       
+ * Assignment Number: Project 03
+ * Section: Mon, Wed 12:30 
+ * Lab TA: Jack, Sofia, Xena
+ * I collaborated with Mackenzie Lee. 
+ */
+ 
+ <User's Guide> FireworksApp class 
+ 
+ When the user runs the program, a window will pop up asking the user to choose a angle and speed of fire work launch 
+ as well as the time delay, which is the time it takes before the fire work actually explodes. After user slides the values for 
+ each categories, the window then asks the user to pick a color as well as type of the explosion with the options for each categories 
+ listed as JRadioButtons. Lastly, the user is asked to choose the launch position. "Center" position is how the user can launch 
+ the fire work from the mid-bottom point of the window. "Left" position is where the user can launch from bottom left half of 
+ the window with "right" position as bottom right half of the window. After all these conditions are filled with a value, user 
+ may press the "launch" button to launch the fire work. Then, the window will prompt the user with how many seconds are left until
+ the explosion and after the seconds run out, another window will pop up with the graphics of the fire work (launch path and the 
+ actual explosion). 
+ 
+ <Step by Step explanation of program> FireworksApp class
+ 
+ in the public FireworksApp class, I created a frame of 500 by 600 that will display the conditions stated in the user guide above
+ (such as angle, speed, time delay, etc.). As a slider, the user can drag the square of the number line to choose the angle, speed, 
+ time as well as position of launch of choosing. With a JRadioButton, I let the user choose one and only one option out of all 
+ those available in the color and type of explosion category. 
+ 
+ For those with a button (this is including the launch button as well as the JRadioButton options of color and type of explosion), 
+ the program will jump to the actionPerformed method. Here, I assigned  the condition that if a certain button is chosen, a color is 
+ assigned to the variable fireworkcolor. Also, I assigned the pressing of the launch button to open up a new class of projectileapp that 
+ creates another window with size of 600 by 600 that will include the graphics part of the fireworks. The timer function is for the 
+ countdown aspect of the program where the prompt window will display how many seconds are left before explosion.  
+ 
+ In the paintComponent, the program calls upon the color of which the variable fireworkcolor was assigned to depending on the user's choice 
+ of button. This is also where I created an array of points xpoints[i]. ypoints[i] that will draw out the individual points and to connect those points up to 
+ where the exact point of explosion is. This is also where I created various shapes and lines to draw out the type of fire work explosion 
+ that the users choice in the first window. 
+ 
+ If the user chose Ripple Explosion, there will be series of circles of larger radiuses that will be displayed. For Square explosion, there will 
+ be series of square with larger widths and heights. Sunlight Explosion will display several sets of shapes that include a circle in the center and 
+ set of lines that expand from that center point of the circle. Flower Explosion will display series of 5, 6 filled ovals that will take form of a flower. 
+ The bubble explosion will display overlap of circles that are slowly expanding in four separate ways like bubbles expanding. 
+ 
+ 
+ 
+ 
